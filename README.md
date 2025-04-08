@@ -11,3 +11,21 @@
   4) Datatype Transformation *
 
 At  last I make the dataset which is cleaned and can be used for further analysis.
+
+
+
+## Task 2---> Data Visualization and Storytelling
+
+* In this task,I have to create a dashboard which basically shows the various charts which reflects the different purposes.
+
+* In this I have created the following charts:
+  * 1) Profit By shipping Mode
+    2) Profit by various categories such as Technology,Office Supplies & Furniture.
+    3) TOp 10 Cities by sales
+    4) Profit By regions of USA *
+   
+* Creating various KPI's:
+   *1) Average Profit of the Superstore
+    2) Average of Sales
+    3) Total Discount provided by the superstore*
+       
