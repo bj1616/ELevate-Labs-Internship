@@ -28,4 +28,18 @@ At  last I make the dataset which is cleaned and can be used for further analysi
    *1) Average Profit of the Superstore
     2) Average of Sales
     3) Total Discount provided by the superstore*
-       
+  
+
+## Task 3---> SQL For Data Analysis
+
+* In this task, I have to use SQL Database tp make query over the given data for getting the ideas of various dql Queries.*
+
+* In this I have Performed following things*
+
+* 1) Use SELECT, WHERE, ORDER BY, GROUP BY
+  2) Use JOINS (INNER, LEFT, RIGHT)
+  3) Write subqueries
+  4) Use aggregate functions (SUM, AVG)
+  5) Create views for analysis
+  6) Optimize queries with indexes *
+
