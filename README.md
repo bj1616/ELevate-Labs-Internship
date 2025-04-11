@@ -5,10 +5,14 @@
 *In this Task, I have used the Netflix Titles dataset which consist  of (8807, 12) i.we 8807 rows and 12 columns*
 
 * In This I have worked upon the following things*
-  *1) Handling the missing values
-  2) Handling the duplicacy
-  3) handling the outlier
-  4) Datatype Transformation*
+  
+  *1) Handling the missing values*
+  
+  *2) Handling the duplicacy*
+     
+  *3) handling the outlier*
+     
+  *4) Datatype Transformation*
 
 At  last I make the dataset which is cleaned and can be used for further analysis.
 
@@ -18,15 +22,22 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 *In this task,I have to create a dashboard which basically shows the various charts which reflects the different purposes.*
 
 * In this I have created the following charts:
+  
    *1) Profit By shipping Mode
-    2) Profit by various categories such as Technology,Office Supplies & Furniture.
-    3) TOp 10 Cities by sales
-    4) Profit By regions of USA*
+  
+   *2) Profit by various categories such as Technology,Office Supplies & Furniture.*
+       
+   *3) TOp 10 Cities by sales*
+       
+   *4) Profit By regions of USA*
    
 * Creating various KPI's:
-   *1) Average Profit of the Superstore
-    2) Average of Sales
-    3) Total Discount provided by the superstore*
+  
+   *1) Average Profit of the Superstore*
+  
+    *2) Average of Sales*
+       
+    *3) Total Discount provided by the superstore*
   
 
 ## Task 3---> SQL For Data Analysis
@@ -35,12 +46,17 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 
 * In this I have Performed following things*
 
-  *1) Use SELECT, WHERE, ORDER BY, GROUP BY
-  2) Use JOINS (INNER, LEFT, RIGHT)
-  3) Write subqueries
-  4) Use aggregate functions (SUM, AVG)
-  5) Create views for analysis
-  6) Optimize queries with indexes*
+  *1) Use SELECT, WHERE, ORDER BY, GROUP BY*
+  
+  *2) Use JOINS (INNER, LEFT, RIGHT)*
+     
+  *3) Write subqueries*
+     
+  *4) Use aggregate functions (SUM, AVG)*
+     
+  *5) Create views for analysis*
+     
+  *6) Optimize queries with indexes*
 
 ## Task 4---> Dashboard Design
 
@@ -49,9 +65,12 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 * The actionable insights of this dashboards are:
 
 *1) We have found that the call centre company has answered the customers mostly related to the “Streaming Queries”, i.e  20.7%.
-2) We Found that most customers have completely resolved their issues i.e 89.86%.
-3) Also Find out the Performance of Staff by finding out the top 10 staff person with the top ratings, we got the name such as Jim,Dan,Martha,Becky,greg,etc.
-4) Also Find out the Satisfaction Rating by Topics such as Streaming,Payment related,Technical support,etc and we found out that highest satisfaction rating goes to the Streaming Category.*
+
+*2) We Found that most customers have completely resolved their issues i.e 89.86%.*
+   
+*3) Also Find out the Performance of Staff by finding out the top 10 staff person with the top ratings, we got the name such as Jim,Dan,Martha,Becky,greg,etc.*
+   
+*4) Also Find out the Satisfaction Rating by Topics such as Streaming,Payment related,Technical support,etc and we found out that highest satisfaction rating goes to the Streaming Category.*
 
 
 
