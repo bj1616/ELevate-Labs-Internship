@@ -72,5 +72,20 @@ At  last I make the dataset which is cleaned and can be used for further analysi
    
 *4) Also Find out the Satisfaction Rating by Topics such as Streaming,Payment related,Technical support,etc and we found out that highest satisfaction rating goes to the Streaming Category.*
 
+## Task 5---> Exploratory Data Analysis (EDA)
 
+* In this task, I have to find out the key insights from the datasets of own choice.*
 
+* I have used the dataset of covid-19 cases.*
+
+* The actionable insights of this EDA are:
+
+*1) As this Insights shows us that Highest death count on a single day happened in "Americas" due to Covid-19 with the death count of 148011,Second highest is the "Europe" With 45844 deaths in particular day.*
+
+*2) We have also FOund out that New cases are obtained highly from the coutries like south-East Asia and America.*
+
+*3) If we look at tha data then we come to know that on an avg. "South East asia" has a highest death rates.*
+
+*4) The ratio of Death_to_Recovered is high for the "Europe" which means it has higher death rates compared to recovered.*
+
+*5) We can See that on an average the recovery rate of Americas are very high compared to other countries.*
