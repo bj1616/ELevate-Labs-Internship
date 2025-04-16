@@ -89,3 +89,19 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 *4) The ratio of Death_to_Recovered is high for the "Europe" which means it has higher death rates compared to recovered.*
 
 *5) We can See that on an average the recovery rate of Americas are very high compared to other countries.*
+
+## Task 6--> Sales Data Analysis Using SQL
+
+* In this task, I have to explore the various functions of sql such as distinct(),extract(),groupby(),orderby() and limit() by performing following tasks on the sales data.*
+
+*a.Use EXTRACT(MONTH FROM order_date) for month.*
+
+*b.GROUP BY year/month.*
+
+*c.Use SUM() for revenue.*
+
+*d.COUNT(DISTINCT order_id) for volume.*
+
+*e.Use ORDER BY for sorting.*
+
+*f.Limit results for specific time periods.*
