@@ -111,8 +111,12 @@ In this task, I have to explore the various functions of sql such as distinct(),
 * In this task I have to perform various sql queries inside the Jupyter notebook and then visualise its data.
 
 *a) Load SQLite database: import sqlite3 conn = sqlite3.connect("sales_data.db")*
+
 *b) Run basic SQL: query = "SELECT product, SUM(quantity) AS total_qty, SUM(quantity * price) AS revenue FROM sales GROUP BY product"*
+
 *c) Load into pandas: import pandas as pd df = pd.read_sql_query(query, conn)*
+
 *d) Print results: print(df)*
+
 *e) Plot simple bar chart: df.plot(kind='bar', x='product', y='revenue')*
   
