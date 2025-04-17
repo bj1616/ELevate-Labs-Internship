@@ -92,7 +92,7 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 
 ## Task 6--> Sales Data Analysis Using SQL
 
-* In this task, I have to explore the various functions of sql such as distinct(),extract(),groupby(),orderby() and limit() by performing following tasks on the sales data.*
+In this task, I have to explore the various functions of sql such as distinct(),extract(),groupby(),orderby() and limit() by performing following tasks on the sales data.*
 
 *a.Use EXTRACT(MONTH FROM order_date) for month.*
 
@@ -105,3 +105,14 @@ At  last I make the dataset which is cleaned and can be used for further analysi
 *e.Use ORDER BY for sorting.*
 
 *f.Limit results for specific time periods.*
+
+## Task 7--> : Get Basic Sales Summary from a Tiny SQLite Database using Python
+
+* In this task I have to perform various sql queries inside the Jupyter notebook and then visualise its data.
+
+*a) Load SQLite database: import sqlite3 conn = sqlite3.connect("sales_data.db")*
+*b) Run basic SQL: query = "SELECT product, SUM(quantity) AS total_qty, SUM(quantity * price) AS revenue FROM sales GROUP BY product"*
+*c) Load into pandas: import pandas as pd df = pd.read_sql_query(query, conn)*
+*d) Print results: print(df)*
+*e) Plot simple bar chart: df.plot(kind='bar', x='product', y='revenue')*
+  
