@@ -134,9 +134,9 @@ In this task, I have to explore the various functions of sql such as distinct(),
 
 *4.	It is also determined that the **“West Region”** of  USA induces the maximum profit to the company.*
 
-*5.	Top 5 Cities with the maximum sales are **“New York , Los Angeles , Seattle , San Francisco , Philadelphia”** .*
+*5.	Top 5 Cities with the maximum sales are **“New York , Los Angeles , Seattle , San Francisco , Philadelphia”**.*
 
-*6.	The segment which leds to the maximum profit is by the **“Consumers”** i.e **46.8%** followed by **“Corporate”**  i.e **32.12%** and  **“Home Office”**  i.e **21.05%.** *
+*6.	The segment which leds to the maximum profit is by the **“Consumers”** i.e **46.8%** followed by **“Corporate”**  i.e **32.12%** and  **“Home Office”**  i.e **21.05%.***
 
 
   
