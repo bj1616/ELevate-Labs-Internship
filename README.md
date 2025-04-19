@@ -119,4 +119,24 @@ In this task, I have to explore the various functions of sql such as distinct(),
 *d) Print results: print(df)*
 
 *e) Plot simple bar chart: df.plot(kind='bar', x='product', y='revenue')*
+
+## Task 8--> : Simple Sales Dashboard Design
+
+*In this Task I have to make a Dashboard Which finds out the insights from the sales_data of any sales_company.*
+
+* **Key insights**
+
+*1. I have added the visuals such as **Donut chart** which helps to know the distribution of the data and make interpretation easier.*
+
+*2. We have found that the sales company earned the maximum profit by **“Standard Class”**  shipping mode.*
+
+*3.	It is determined that the Sales company has the maximum profit earned by the sales of  **“Technological Products”**  i.e  **50.79%** profit.*
+
+*4.	It is also determined that the **“West Region”** of  USA induces the maximum profit to the company.*
+
+*5.	Top 5 Cities with the maximum sales are **“New York , Los Angeles , Seattle , San Francisco , Philadelphia”** .*
+
+*6.	The segment which leds to the maximum profit is by the **“Consumers”** i.e **46.8%** followed by **“Corporate”**  i.e **32.12%** and  **“Home Office”**  i.e **21.05%.** *
+
+
   
