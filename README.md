@@ -140,3 +140,27 @@ In this task, I have to explore the various functions of sql such as distinct(),
 
 
   
+
+## Dynamic Inventory Management System
+
+A modern, full-stack dynamic inventory management system with drag-and-drop functionality.
+
+**Location:** `inventory-management/`
+
+**Features:**
+- 🎯 Drag & Drop form builder with 15+ field types
+- 👁️ Live preview with real-time updates
+- 🤖 AI-powered suggestions and best practices
+- 📊 Analytics dashboard with usage statistics
+- 💾 Local storage for data persistence
+- 📤 Export forms as JSON
+- 🎨 Modern, responsive UI with animations
+
+**Quick Start:**
+```bash
+cd inventory-management
+open index.html  # or your browser command
+```
+
+See `inventory-management/README.md` for detailed documentation.
+
