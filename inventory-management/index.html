@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1><i class="fas fa-warehouse"></i> Dynamic Inventory Management System</h1>
+            <div class="header-actions">
+                <button id="aiSuggestionsBtn" class="btn btn-ai">
+                    <i class="fas fa-brain"></i> AI Suggestions
+                </button>
+                <button id="analyticsBtn" class="btn btn-analytics">
+                    <i class="fas fa-chart-line"></i> Analytics
+                </button>
+                <button id="exportBtn" class="btn btn-export">
+                    <i class="fas fa-download"></i> Export Form
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar: Field Library -->
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-th-large"></i> Field Library</h2>
+                <p class="subtitle">Drag fields to build your form</p>
+            </div>
+            <div class="field-search">
+                <input type="text" id="fieldSearch" placeholder="Search fields...">
+            </div>
+            <div class="field-categories">
+                <div class="field-category">
+                    <h3><i class="fas fa-font"></i> Text Inputs</h3>
+                    <div class="field-list">
+                        <div class="field-item" draggable="true" data-field-type="text">
+                            <i class="fas fa-i-cursor"></i>
+                            <span>Text Field</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="textarea">
+                            <i class="fas fa-align-left"></i>
+                            <span>Text Area</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="number">
+                            <i class="fas fa-hashtag"></i>
+                            <span>Number</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-category">
+                    <h3><i class="fas fa-check-square"></i> Selections</h3>
+                    <div class="field-list">
+                        <div class="field-item" draggable="true" data-field-type="select">
+                            <i class="fas fa-caret-square-down"></i>
+                            <span>Dropdown</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="radio">
+                            <i class="fas fa-dot-circle"></i>
+                            <span>Radio Button</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="checkbox">
+                            <i class="fas fa-check-square"></i>
+                            <span>Checkbox</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-category">
+                    <h3><i class="fas fa-calendar"></i> Date & Time</h3>
+                    <div class="field-list">
+                        <div class="field-item" draggable="true" data-field-type="date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Date</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="time">
+                            <i class="fas fa-clock"></i>
+                            <span>Time</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="datetime">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Date & Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-category">
+                    <h3><i class="fas fa-box"></i> Inventory Specific</h3>
+                    <div class="field-list">
+                        <div class="field-item" draggable="true" data-field-type="sku">
+                            <i class="fas fa-barcode"></i>
+                            <span>SKU/Barcode</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="quantity">
+                            <i class="fas fa-cubes"></i>
+                            <span>Quantity</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="price">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Price</span>
+                        </div>
+                        <div class="field-item" draggable="true" data-field-type="category">
+                            <i class="fas fa-tags"></i>
+                            <span>Category</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center: Form Builder -->
+        <main class="form-builder">
+            <div class="builder-header">
+                <h2><i class="fas fa-edit"></i> Form Builder</h2>
+                <div class="builder-actions">
+                    <button id="clearFormBtn" class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                    <button id="saveFormBtn" class="btn btn-sm btn-primary">
+                        <i class="fas fa-save"></i> Save Form
+                    </button>
+                </div>
+            </div>
+            <div id="formBuilderArea" class="form-builder-area">
+                <div class="empty-state">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <h3>Start Building Your Inventory Form</h3>
+                    <p>Drag and drop fields from the left panel to create your custom inventory form</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: Live Preview -->
+        <aside class="right-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-eye"></i> Live Preview</h2>
+                <p class="subtitle">See your form in real-time</p>
+            </div>
+            <div id="livePreview" class="live-preview">
+                <div class="preview-empty">
+                    <i class="fas fa-file-alt"></i>
+                    <p>Your form preview will appear here</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- AI Suggestions Modal -->
+    <div id="aiModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-brain"></i> AI-Powered Suggestions</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="suggestion-card active" id="currentSuggestion">
+                    <div class="suggestion-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="suggestion-content">
+                        <h3>Getting Started</h3>
+                        <p>Welcome! Start by dragging essential inventory fields like SKU/Barcode, Product Name, Quantity, and Price to your form.</p>
+                    </div>
+                </div>
+                <div class="suggestions-list">
+                    <h3>Recommended Best Practices</h3>
+                    <div class="suggestion-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Always include a unique identifier (SKU or Barcode) for each inventory item</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Use dropdown menus for categories to maintain consistency</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Add date fields to track inventory received and expiry dates</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Include quantity fields with minimum stock level alerts</span>
+                    </div>
+                    <div class="suggestion-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Use text areas for detailed product descriptions and notes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Modal -->
+    <div id="analyticsModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2><i class="fas fa-chart-line"></i> Analytics Dashboard</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Form Usage Statistics</h3>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value" id="totalFields">0</div>
+                                <div class="stat-label">Total Fields</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="formsSaved">0</div>
+                                <div class="stat-label">Forms Saved</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="formsExported">0</div>
+                                <div class="stat-label">Forms Exported</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Field Distribution</h3>
+                        </div>
+                        <canvas id="fieldDistributionChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Most Used Fields</h3>
+                        </div>
+                        <div id="popularFieldsList" class="popular-fields-list">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Activity Timeline</h3>
+                        </div>
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
